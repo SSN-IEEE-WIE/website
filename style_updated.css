@@ -187,7 +187,7 @@ nav ul li a:hover {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
   font-size: 3rem;
-  color: #7b1fa2;
+  color: #2b0a3a;
 }
 .inner-box {
   position: relative;
@@ -210,7 +210,7 @@ nav ul li a:hover {
   width: 100%;
   animation: textSlide 6s infinite;
   opacity: 0;
-  color: #7b1fa2;
+  color: #2b0a3a;
   transition: opacity 0.5s ease-in-out;
 }
 .dynamic-text span:nth-child(2) {
