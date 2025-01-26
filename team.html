@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - IEEE WIE SSN</title>
+    <link rel="stylesheet" href="style_updated.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="images/ieeewie_logo.jpg" alt="IEEE Logo" class="logo">
+            <img src="images/ssn_logo.png" alt="SSN Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="team.html" class="active">Team</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="wave-container">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+        <div class="wave wave5"></div>
+        <div class="wave wave6"></div>
+        <div class="wave wave7"></div>
+        <div class="wave wave8"></div>
+        <div class="wave wave9"></div>
+        <div class="wave wave10"></div>
+        <div class="wave wave11"></div>
+        <div class="wave wave12"></div>
+        <div class="wave wave13"></div>
+        <div class="wave wave14"></div>
+        <div class="wave wave15"></div>
+    </div>
+
+    <div class="team-container">
+        <h1 class="team-title">Meet Our Teams</h1>
+
+        <div class="team-row">
+            <div class="team-card">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <img src="images/Technical.png" alt="Technical Team">
+                        <img src="images/tt1.jpeg" alt="Technical Member 1">
+                        <img src="images/tt5.jpeg" alt="Technical Member 2">
+                        <img src="images/tt2.jpeg" alt="Technical Member 2">
+                        <img src="images/tt4.jpeg" alt="Technical Member 2">
+                        <img src="images/tt3.jpeg" alt="Technical Member 3">
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <img src="images/Design.png" alt="Design Team">
+                        <img src="images/ds1.jpeg" alt="Designer 1">
+                        <img src="images/ds2.jpeg" alt="Designer 1">
+                        <img src="images/ds3.jpeg" alt="Designer 1">
+                        <img src="images/ds4.jpeg" alt="Designer 2">
+                        <img src="images/ds5.jpeg" alt="Designer 3">
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Office Bearers Centered -->
+        <div class="team-row center-row">
+            <div class="team-card">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <img src="images/OfficeBearers.png" alt="Office Bearers">
+                        <img src="images/ob1.jpeg" alt="Office Bearer 1">
+                        <img src="images/ob2.jpeg" alt="Office Bearer 1">
+                        <img src="images/ob3.jpeg" alt="Office Bearer 1">
+                        <img src="images/ob4.jpeg" alt="Office Bearer 2">
+                        <img src="images/ob5.jpeg" alt="Office Bearer 3">
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-row">
+            <div class="team-card">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <img src="images/PublicRelations.png" alt="Public Relations Team">
+                        <img src="images/pr1.jpeg" alt="Public Relations Member 1">
+                        <img src="images/pr2.jpeg" alt="Public Relations Member 1">
+                        <img src="images/pr3.jpeg" alt="Public Relations Member 1">
+                        <img src="images/pr4.jpeg" alt="Public Relations Member 2">
+                        <img src="images/pr5.jpeg" alt="Public Relations Member 3">
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <img src="images/EventMangement.png" alt="Event Management">
+                        <img src="images/em1.jpeg" alt="Event Manager 1">
+                        <img src="images/em2.jpeg" alt="Event Manager 2">
+                        <img src="images/em3.jpeg" alt="Event Manager 3">
+                        <img src="images/em4.jpeg" alt="Event Manager 3">
+                        <img src="images/em5.jpeg" alt="Event Manager 3">
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.carousel-container').forEach(container => {
+            const carousel = container.querySelector('.carousel');
+            const prevBtn = container.querySelector('.prev-btn');
+            const nextBtn = container.querySelector('.next-btn');
+    
+            let currentIndex = 0;
+    
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + carousel.children.length) % carousel.children.length;
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            });
+    
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % carousel.children.length;
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            });
+        });
+    </script>
+    
+</body>
+</html>
