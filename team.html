@@ -44,6 +44,25 @@
     <div class="team-container">
         <h1 class="team-title">Meet Our Teams</h1>
 
+        <!-- Office Bearers Section at the Top -->
+        <div class="team-row">
+            <div class="team-card">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <img src="images/OfficeBearers.png" alt="Office Bearers">
+                        <img src="images/ob1.jpeg" alt="Office Bearer 1">
+                        <img src="images/ob2.jpeg" alt="Office Bearer 2">
+                        <img src="images/ob3.jpeg" alt="Office Bearer 3">
+                        <img src="images/ob4.jpeg" alt="Office Bearer 4">
+                        <img src="images/ob5.jpeg" alt="Office Bearer 5">
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical and Design Teams -->
         <div class="team-row">
             <div class="team-card">
                 <div class="carousel-container">
@@ -51,9 +70,9 @@
                         <img src="images/Technical.png" alt="Technical Team">
                         <img src="images/tt1.jpeg" alt="Technical Member 1">
                         <img src="images/tt5.jpeg" alt="Technical Member 2">
-                        <img src="images/tt2.jpeg" alt="Technical Member 2">
-                        <img src="images/tt4.jpeg" alt="Technical Member 2">
-                        <img src="images/tt3.jpeg" alt="Technical Member 3">
+                        <img src="images/tt2.jpeg" alt="Technical Member 3">
+                        <img src="images/tt4.jpeg" alt="Technical Member 4">
+                        <img src="images/tt3.jpeg" alt="Technical Member 5">
                     </div>
                     <button class="prev-btn">&#10094;</button>
                     <button class="next-btn">&#10095;</button>
@@ -64,10 +83,10 @@
                     <div class="carousel">
                         <img src="images/Design.png" alt="Design Team">
                         <img src="images/ds1.jpeg" alt="Designer 1">
-                        <img src="images/ds2.jpeg" alt="Designer 1">
-                        <img src="images/ds3.jpeg" alt="Designer 1">
-                        <img src="images/ds4.jpeg" alt="Designer 2">
-                        <img src="images/ds5.jpeg" alt="Designer 3">
+                        <img src="images/ds2.jpeg" alt="Designer 2">
+                        <img src="images/ds3.jpeg" alt="Designer 3">
+                        <img src="images/ds4.jpeg" alt="Designer 4">
+                        <img src="images/ds5.jpeg" alt="Designer 5">
                     </div>
                     <button class="prev-btn">&#10094;</button>
                     <button class="next-btn">&#10095;</button>
@@ -75,34 +94,17 @@
             </div>
         </div>
 
-        <!-- Row 2: Office Bearers Centered -->
-        <div class="team-row center-row">
-            <div class="team-card">
-                <div class="carousel-container">
-                    <div class="carousel">
-                        <img src="images/OfficeBearers.png" alt="Office Bearers">
-                        <img src="images/ob1.jpeg" alt="Office Bearer 1">
-                        <img src="images/ob2.jpeg" alt="Office Bearer 1">
-                        <img src="images/ob3.jpeg" alt="Office Bearer 1">
-                        <img src="images/ob4.jpeg" alt="Office Bearer 2">
-                        <img src="images/ob5.jpeg" alt="Office Bearer 3">
-                    </div>
-                    <button class="prev-btn">&#10094;</button>
-                    <button class="next-btn">&#10095;</button>
-                </div>
-            </div>
-        </div>
-
+        <!-- Public Relations and Event Management Teams -->
         <div class="team-row">
             <div class="team-card">
                 <div class="carousel-container">
                     <div class="carousel">
                         <img src="images/PublicRelations.png" alt="Public Relations Team">
                         <img src="images/pr1.jpeg" alt="Public Relations Member 1">
-                        <img src="images/pr2.jpeg" alt="Public Relations Member 1">
-                        <img src="images/pr3.jpeg" alt="Public Relations Member 1">
-                        <img src="images/pr4.jpeg" alt="Public Relations Member 2">
-                        <img src="images/pr5.jpeg" alt="Public Relations Member 3">
+                        <img src="images/pr2.jpeg" alt="Public Relations Member 2">
+                        <img src="images/pr3.jpeg" alt="Public Relations Member 3">
+                        <img src="images/pr4.jpeg" alt="Public Relations Member 4">
+                        <img src="images/pr5.jpeg" alt="Public Relations Member 5">
                     </div>
                     <button class="prev-btn">&#10094;</button>
                     <button class="next-btn">&#10095;</button>
@@ -115,8 +117,8 @@
                         <img src="images/em1.jpeg" alt="Event Manager 1">
                         <img src="images/em2.jpeg" alt="Event Manager 2">
                         <img src="images/em3.jpeg" alt="Event Manager 3">
-                        <img src="images/em4.jpeg" alt="Event Manager 3">
-                        <img src="images/em5.jpeg" alt="Event Manager 3">
+                        <img src="images/em4.jpeg" alt="Event Manager 4">
+                        <img src="images/em5.jpeg" alt="Event Manager 5">
                     </div>
                     <button class="prev-btn">&#10094;</button>
                     <button class="next-btn">&#10095;</button>
@@ -131,18 +133,21 @@
             const nextBtn = container.querySelector('.next-btn');
     
             let currentIndex = 0;
+            const totalItems = carousel.children.length;
     
+            carousel.style.display = "flex";
+            carousel.style.transition = "transform 0.5s ease-in-out";
+
             prevBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex - 1 + carousel.children.length) % carousel.children.length;
+                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
                 carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
             });
-    
+
             nextBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % carousel.children.length;
+                currentIndex = (currentIndex + 1) % totalItems;
                 carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
             });
         });
     </script>
-    
 </body>
 </html>
